@@ -24,10 +24,8 @@ body {
     padding: 20px;
     text-align: center;
     position: relative;
-
   }
   
-
   .banner {
     display: flex;
     align-items: center;
