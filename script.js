@@ -63,24 +63,4 @@ timelineItems.forEach(item => {
     observer.observe(item);
 });
 
-// Back to Top Button functionality
-const backToTopButton = document.createElement('button');
-backToTopButton.textContent = "↑ Top";
-backToTopButton.classList.add('back-to-top');
-document.body.appendChild(backToTopButton);
 
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Show/Hide Back to Top Button based on scroll position
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('visible');
-    } else {
-        backToTopButton.classList.remove('visible');
-    }
-});
