@@ -65,7 +65,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 2.0rem;
+    font-size: 1.6rem;
     color:#800000;
     font-family: 'Georgia', serif;
     letter-spacing: 2px;
@@ -96,6 +96,7 @@ h2 {
     text-decoration: none;
     font-size: 18px;
     transition: all 0.3s ease;
+    text-transform: uppercase;
   }
   
   .navigation ul li a:hover {
@@ -103,23 +104,26 @@ h2 {
     text-shadow: 0px 2px 10px rgba(255, 255, 255, 0.6);
   }
 
-  @media (max-width: 768px) {
-    .navigation ul {
-        flex-direction: column; /* Stack links vertically on small screens */
-        align-items: center; /* Center links in the vertical layout */
-    }
+  .footer {
+    color:black;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 1px;
+  }
+  
+  .footer-content {
+    margin: 0;
+  }
 
-    .navigation li {
-        margin: 10px 0; /* Adjust spacing for vertical layout */
-    }
-}
+ 
 
 
 /* Timeline */
 
 .timeline {
     background-color: #f7f7f7;
-    padding: 50px 0;
+    padding: 5px 0;
     text-align: center;
 }
 .timeline-container {
@@ -178,7 +182,7 @@ h2 {
 .timeline-content h3 {
     color: #e76f51;
     margin-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-family: 'Georgia', serif;
 }
 
@@ -215,7 +219,10 @@ h2 {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Responsive Design */
+/* General Styles for Footer */
+
+
+  /* Responsive Design For Timeline */
 @media (max-width: 768px) {
     h2 {
         font-size: 2rem;
@@ -249,64 +256,101 @@ h2 {
     }
 }
 
-.back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 90px;
-    background-color: #264653;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    display: none;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
+@media (max-width: 480px) {
 
-.back-to-top.visible {
-    display: block;
-}
+    h1 {
+        font-size: 18px;
+      }
+    
+      .chakra-image {
+        width: 50px;
+        height: auto;
+      }
+    
+      .container {
+        width: 100%;
+      }
+      .navigation {
+        align-items: center;
+        padding: 6px 0;
+        border-radius: 0px;
+      }
+      .navigation ul {
+        padding: 0;
+        margin: 0;
+      }
+      .navigation ul li {
+        margin-bottom: 2px;
+        padding: 0;
+      }
+      .navigation ul li a {
+        font-size: 9px;
+        padding: 1px 0;
+        margin-left: 2px;
+        
+      }
+      h2 {
+        font-size: 1.4rem; 
+        margin: 0.25rem 0; 
+      }
 
-.back-to-top:hover {
-    background-color: #e76f51;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
+    
+    .timeline-container {
+        padding: 0 5px; 
+    }
+    .timeline-container p {
+        font-size: 1rem;
+    }
 
-/* General Styles for Footer */
-/* General Styles for Footer */
-.footer {
-    /* background-color: #333; */
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    font-size: 14px;
-    /* border-top: 2px solid #444; */
-    margin-top: 1px;
-  
-  }
-  
-  .footer-content {
-    margin: 0;
-  }
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px; 
+    }
+
+    
+    .timeline-date {
+    
+        font-size: 1.0rem;
+         
+    }
+
+    .timeline-date::after {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .timeline-item:nth-child(even) .timeline-date {
+        border-bottom-color: #2a9d8f;
+    }
+
+    .timeline h2 {
+        font-size: 1.4rem;
+    }
+
+    .footer-content p {
+        font-size: 10px;
+    }
+
+
+    
+}
 
 /* Architectures */
 .architecture {
     background-color: #f7f7f7;
-    padding: 50px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
-.architecture h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #800000;
-}
 
 .architecture p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: #555;
     margin-bottom: 30px;
     max-width: 800px;
@@ -332,7 +376,7 @@ h2 {
 .architecture-item h3 {
     color: #e76f51;
     margin-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .architecture-item p {
@@ -355,19 +399,61 @@ h2 {
     margin-top: 20px;
 }
 
+/* Responsive Design For Mobile */
+
+@media (max-width: 768px) {
+    .architecture-item {
+        padding: 15px;
+    }
+
+    .architecture-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .architecture-item p {
+        font-size: 0.9rem;
+    }
+
+    .architecture-item ul {
+        padding-left: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .architecture {
+        padding: 8px 0;
+    }
+
+    .architecture-item {
+        padding: 8px;
+    }
+
+    .architecture-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .architecture-item p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .architecture-item ul {
+        padding-left: 0;
+    }
+
+    .architecture-item img {
+        margin-top: 15px;
+    }
+}
+
 /* Dynasties */
 .dynasties {
     background-color: #f7f7f7;
-    padding: 50px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
-.dynasties h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #800000;
-}
 
 .dynasty-container {
     display: flex;
@@ -393,15 +479,19 @@ h2 {
 .dynasty-card h3 {
     color: #e76f51;
     margin-bottom: 10px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .dynasty-card p {
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+
 
 .dynasty-card ul {
     text-align: left;
@@ -417,25 +507,61 @@ h2 {
     color: #264653;
 }
 
+/* Responsive Styles for Dynasties */
+@media (max-width: 768px) {
+    .dynasty-container {
+        gap: 20px; 
+    }
+
+    .dynasty-card {
+        width: 100%; 
+        padding: 15px; 
+    }
+
+    .dynasty-card h3 {
+        font-size: 1.2rem; 
+    }
+
+    .dynasty-card p {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .dynasty-container {
+        gap: 15px; 
+    }
+
+    .dynasty-card {
+        width: 100%; 
+        padding: 10px; 
+    }
+
+    .dynasty-card h3 {
+        font-size: 1.2rem; 
+        margin-bottom: 8px; 
+    }
+
+    .dynasty-card p {
+        font-size: 1rem; 
+        margin-bottom: 10px; 
+        text-align: justify;
+        letter-spacing: 0.50px;
+    }
+
+    .dynasty-card ul li {
+        margin-bottom: 6px;
+        font-size: 1rem; 
+    }
+}
+
 /* Cultures Section */
 .culture {
-    padding: 50px 0;
+    padding: 5px 0;
     background-color: #f7f7f7;
     color: #333;
 }
 
-.culture h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #800000;
-}
-
-.culture p {
-    text-align: center;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
 
 /* Container for Culture Items */
 .culture-item {
@@ -446,15 +572,10 @@ h2 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.culture-item h3 {
+.culture h3 {
     color: #e76f51;
     margin-bottom: 10px;
-    font-size: 1.8rem;
-}
-
-.culture-item p {
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
 }
 
 .culture-item ul {
@@ -464,6 +585,11 @@ h2 {
 
 .culture-item ul li {
     margin-bottom: 10px;
+}
+
+.culture-item h4 {
+    font-size: 1rem;
+    color: #555;
 }
 
 .photo {
@@ -488,16 +614,31 @@ h2 {
     transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
 
-/* Ensure images in smaller devices look good */
-@media (max-width: 768px) {
-    .culture-item img {
-        max-height: 100px; /* Further reduce the maximum height on smaller screens */
-        margin: 5px 0; /* Reduce margin for smaller screens */
-    }
-}
+/* .footer {
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 1px;
+  } */
+  
+  /* .footer-content {
+    margin: 0;
+  } */
 
-/* Responsive Design */
+/* Ensure images in smaller devices look good */
+
+
 @media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .navigation li {
+        margin: 10px 0; 
+    }
+
     .culture-item {
         padding: 10px;
     }
@@ -509,4 +650,27 @@ h2 {
     .culture-item p {
         font-size: 0.9em;
     }
+
+    
 }
+
+@media screen and (max-width: 480px) {
+   
+   
+    .culture-item img {
+        max-height: 65px; 
+        margin: 5px 0; 
+    }
+    .culture h2  {
+        font-size: 1.4rem;
+    }
+    .culture h4  {
+        font-size: 1rem;
+    }
+
+    .culture li {
+        font-size: 1rem;
+    }    
+}
+
+    
