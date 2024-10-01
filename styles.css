@@ -1,4 +1,4 @@
-/* Basic styling for the layout */
+css code : /* Basic styling for the layout */
 * {
   box-sizing: border-box;
 }
@@ -73,6 +73,8 @@ h1 {
   text-align: left;
 }
 
+
+
 .navigation ul li {
   display: inline-block;
   margin-right: 20px;
@@ -90,6 +92,8 @@ h1 {
   color: #f4a261;
   text-shadow: 0px 2px 10px rgba(255, 255, 255, 0.6);
 }
+
+
 
 .content {
   display: grid;
@@ -196,6 +200,7 @@ button.expanded {
   .chakra-image {
     width: 50px;
     height: auto;
+    border: 2px solid white;  
   }
 
   .container {
